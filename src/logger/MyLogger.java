@@ -1,7 +1,5 @@
 package logger;
 
-import com.hackerrank.work_schedule.WorkSchedule;
-
 import java.util.logging.ConsoleHandler;
 import java.util.logging.Formatter;
 import java.util.logging.LogRecord;
@@ -13,9 +11,12 @@ import java.util.logging.Logger;
  */
 public abstract class MyLogger {
 
+    protected MyLogger() {
+    }
+
     protected static final Logger LOGGER;
     static {
-        Logger mainLogger = Logger.getLogger(WorkSchedule.class.getPackage().getName());
+        Logger mainLogger = Logger.getLogger("GenericLogger");
         mainLogger.setUseParentHandlers(false);
         ConsoleHandler handler = new ConsoleHandler();
         handler.setFormatter(new Formatter() {
@@ -25,6 +26,6 @@ public abstract class MyLogger {
             }
         });
         mainLogger.addHandler(handler);
-        LOGGER = Logger.getLogger(WorkSchedule.class.getName());
+        LOGGER = Logger.getLogger("GenericLogger");
     }
 }

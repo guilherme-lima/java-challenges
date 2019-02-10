@@ -1,4 +1,4 @@
-package com.hackerrank.work_schedule;
+package work_schedule;
 
 import logger.MyLogger;
 

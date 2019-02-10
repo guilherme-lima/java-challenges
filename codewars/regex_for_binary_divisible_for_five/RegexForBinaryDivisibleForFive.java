@@ -1,4 +1,4 @@
-package com.codewars.regex_for_binary_divisible_for_five;
+package regex_for_binary_divisible_for_five;
 
 import logger.MyLogger;
 
@@ -32,7 +32,6 @@ public class RegexForBinaryDivisibleForFive extends MyLogger {
             new Object[] {false,  Integer.toBinaryString(328)},
             new Object[] {false,  Integer.toBinaryString(5729)}
     };
-
 
     public static void main(String[] args) {
         for (Object[] arr: testArr) {
