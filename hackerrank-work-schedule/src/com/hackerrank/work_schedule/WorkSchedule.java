@@ -1,28 +1,14 @@
-package com.hackerrank;
+package com.hackerrank.work_schedule;
+
+import logger.MyLogger;
 
 import java.util.List;
-import java.util.logging.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 import static java.util.stream.Collectors.toList;
 
-public class WorkSchedule {
-
-    private static final Logger LOGGER;
-    static {
-        Logger mainLogger = Logger.getLogger(WorkSchedule.class.getPackage().getName());
-        mainLogger.setUseParentHandlers(false);
-        ConsoleHandler handler = new ConsoleHandler();
-        handler.setFormatter(new Formatter() {
-            @Override
-            public String format(LogRecord record) {
-                return record.getMessage() + "\n";
-            }
-        });
-        mainLogger.addHandler(handler);
-        LOGGER = Logger.getLogger(WorkSchedule.class.getName());
-    }
+public class WorkSchedule extends MyLogger {
 
     public static void main(String[] args) {
         findSchedules(24, 4, "08??840").forEach(LOGGER::info);
